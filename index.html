@@ -32,8 +32,12 @@ body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--cream);ove
 .topbar{
   position:sticky;top:0;z-index:300;
   background:#1A1208;padding:10px 20px;text-align:center;
+  display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;
   font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#F5EDD6;
 }
+.topbar-urgency{color:#F7D36B}
+.topbar-urgency strong{color:#fff4c7}
+@media(max-width:700px){.topbar{gap:4px 10px;padding:9px 12px;font-size:11px;line-height:1.35}.topbar-urgency{width:100%}}
 
 /* MARQUEE */
 .mq{background:#EDE7D9;border-bottom:1px solid var(--border);overflow:hidden;padding:9px 0;white-space:nowrap}
@@ -490,7 +494,8 @@ src="https://www.facebook.com/tr?id=1597085298620721&ev=PageView&noscript=1"/></
 
 <!-- TOPBAR -->
 <div class="topbar">
-  Manual prático para criar e divulgar sua primeira oferta low ticket &nbsp;|&nbsp; Acesso imediato &nbsp;|&nbsp; <strong>R$14,67 em pagamento único</strong>
+  <span>Manual prático para criar e divulgar sua primeira oferta low ticket &nbsp;|&nbsp; Acesso imediato</span>
+  <span class="topbar-urgency">Preço promocional para os primeiros 100 clientes &nbsp;·&nbsp; 67 já compraram &nbsp;·&nbsp; <strong>R$14,67</strong></span>
 </div>
 
 <!-- MARQUEE -->
