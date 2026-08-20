@@ -413,16 +413,23 @@ fbq('track','PageView');
 src="https://www.facebook.com/tr?id=1597085298620721&ev=PageView&noscript=1"/></noscript>
 <style>
 .preview-sec{padding:92px 0;background:var(--cream);border-top:1px solid rgba(16,35,24,.10);border-bottom:1px solid rgba(16,35,24,.10)}
-.preview-intro{max-width:680px;margin-bottom:38px}
-.preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
-.preview-card{margin:0;background:#fff;border:1px solid rgba(16,35,24,.13);border-radius:16px;overflow:hidden;box-shadow:0 12px 30px rgba(16,35,24,.08)}
-.preview-card.preview-wide{grid-column:span 2}
-.preview-card img{display:block;width:100%;height:auto;background:#f7f3e8}
-.preview-card figcaption{padding:13px 17px 15px;color:var(--ink);font-size:14px;font-weight:700;letter-spacing:.01em}
+.preview-intro{display:none}
+.preview-carousel{position:relative;display:flex;align-items:center;gap:16px;max-width:920px;margin:34px auto 0}
+.preview-viewport{width:100%;overflow:hidden;border-radius:18px;background:#fff;border:1px solid rgba(16,35,24,.13);box-shadow:0 16px 38px rgba(16,35,24,.10)}
+.preview-track{display:flex;transition:transform .42s ease;will-change:transform}
+.preview-card{flex:0 0 100%;width:100%;margin:0;background:#fff;overflow:hidden}
+.preview-card img{display:block;width:100%;height:auto;max-height:610px;object-fit:contain;background:#f7f3e8}
+.preview-card figcaption{padding:14px 18px 16px;color:var(--ink);font-size:14px;font-weight:700;letter-spacing:.01em;text-align:center}
+.preview-arrow{flex:0 0 46px;width:46px;height:46px;border:1px solid rgba(16,35,24,.18);border-radius:50%;background:var(--cream);color:var(--ink);font-size:28px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .2s ease,transform .2s ease,box-shadow .2s ease;z-index:2}
+.preview-arrow:hover{background:var(--amber);transform:translateY(-2px);box-shadow:0 8px 18px rgba(16,35,24,.16)}
+.preview-arrow:focus-visible{outline:3px solid rgba(196,135,0,.45);outline-offset:3px}
+.preview-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.preview-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(16,35,24,.20);cursor:pointer;transition:transform .2s ease,background .2s ease}
+.preview-dot.is-active{background:var(--amber);transform:scale(1.35)}
 .lot-urgency{display:flex;flex-direction:column;gap:5px;margin:18px 0 4px;padding:14px 16px;border:1px solid rgba(196,135,0,.42);border-radius:10px;background:rgba(196,135,0,.10);color:var(--ink);font-size:13px;line-height:1.45}
 .lot-urgency strong{color:#8f6200;font-size:14px}
 .lot-urgency span{color:var(--muted)}
-@media(max-width:700px){.preview-sec{padding:68px 0}.preview-grid{grid-template-columns:1fr;gap:17px}.preview-card.preview-wide{grid-column:auto}.preview-card figcaption{font-size:13px}.lot-urgency{font-size:12.5px}}
+@media(max-width:700px){.preview-sec{padding:68px 0}.preview-carousel{gap:8px}.preview-arrow{flex-basis:38px;width:38px;height:38px;font-size:23px}.preview-card img{max-height:none}.preview-card figcaption{font-size:13px}.lot-urgency{font-size:12.5px}}
 </style>
 </head>
 <body>
@@ -615,20 +622,26 @@ src="https://www.facebook.com/tr?id=1597085298620721&ev=PageView&noscript=1"/></
 <!-- PREVIAS DO PRODUTO -->
 <section class="preview-sec" id="previas">
   <div class="w">
-    <p class="tag rev">Veja algumas partes do conteúdo</p>
-    <h2 class="sh rev">Por dentro do material.</h2>
-    <p class="sp rev preview-intro">Algumas prévias dos conteúdos para você entender o nível de organização e aplicação prática da oferta.</p>
-    <div class="preview-grid">
-      <figure class="preview-card preview-wide rev"><img src="assets/previews/modulos-overview.png" alt="Visão geral dos cinco conteúdos do Manual da Venda Low Ticket" loading="lazy"><figcaption>Visão geral dos conteúdos</figcaption></figure>
-      <figure class="preview-card rev"><img src="assets/previews/nicho-mercados.png" alt="Prévia sobre os três grandes mercados e o radar de crescimento" loading="lazy"><figcaption>Mercados e oportunidades de nicho</figcaption></figure>
-      <figure class="preview-card rev"><img src="assets/previews/regra-tres-camadas.png" alt="Prévia sobre a regra das três camadas de mercado, nicho e sub-nicho" loading="lazy"><figcaption>Mercado, nicho e sub-nicho</figcaption></figure>
-      <figure class="preview-card rev"><img src="assets/previews/escala-fases.png" alt="Prévia sobre as três fases de escala" loading="lazy"><figcaption>Fases de validação, otimização e escala</figcaption></figure>
-      <figure class="preview-card rev"><img src="assets/previews/ilusao-verdadeira-escala.png" alt="Prévia comparando ilusão e verdadeira escala" loading="lazy"><figcaption>Escala com controle</figcaption></figure>
-      <figure class="preview-card rev"><img src="assets/previews/escala-vertical-horizontal.png" alt="Prévia comparando escala vertical e escala horizontal" loading="lazy"><figcaption>Escala vertical e horizontal</figcaption></figure>
-      <figure class="preview-card preview-wide rev"><img src="assets/previews/oxigenio-digital.png" alt="Prévia sobre tráfego como oxigênio do digital" loading="lazy"><figcaption>O papel do tráfego no digital</figcaption></figure>
-      <figure class="preview-card rev"><img src="assets/previews/organico-pago.png" alt="Prévia comparando tráfego orgânico e tráfego pago" loading="lazy"><figcaption>Tráfego orgânico e pago</figcaption></figure>
-      <figure class="preview-card rev"><img src="assets/previews/primeiros-7-dias.png" alt="Prévia sobre o que observar nos primeiros sete dias de campanha" loading="lazy"><figcaption>O que observar nos primeiros 7 dias</figcaption></figure>
+    <p class="tag rev">Uma amostra do material</p>
+    <h2 class="sh rev">Uma prévia do que você vai receber.</h2>
+    <div class="preview-carousel" aria-label="Pré-visualização dos conteúdos do produto">
+      <button class="preview-arrow" type="button" data-preview-prev aria-label="Imagem anterior">‹</button>
+      <div class="preview-viewport">
+        <div class="preview-track" data-preview-track aria-live="polite">
+          <figure class="preview-card rev"><img src="assets/previews/modulos-overview.png" alt="Visão geral dos cinco conteúdos do Manual da Venda Low Ticket" loading="lazy"><figcaption>Visão geral dos conteúdos</figcaption></figure>
+          <figure class="preview-card rev"><img src="assets/previews/nicho-mercados.png" alt="Prévia sobre os três grandes mercados e o radar de crescimento" loading="lazy"><figcaption>Mercados e oportunidades de nicho</figcaption></figure>
+          <figure class="preview-card rev"><img src="assets/previews/regra-tres-camadas.png" alt="Prévia sobre a regra das três camadas de mercado, nicho e sub-nicho" loading="lazy"><figcaption>Mercado, nicho e sub-nicho</figcaption></figure>
+          <figure class="preview-card rev"><img src="assets/previews/escala-fases.png" alt="Prévia sobre as três fases de escala" loading="lazy"><figcaption>Fases de validação, otimização e escala</figcaption></figure>
+          <figure class="preview-card rev"><img src="assets/previews/ilusao-verdadeira-escala.png" alt="Prévia comparando ilusão e verdadeira escala" loading="lazy"><figcaption>Escala com controle</figcaption></figure>
+          <figure class="preview-card rev"><img src="assets/previews/escala-vertical-horizontal.png" alt="Prévia comparando escala vertical e escala horizontal" loading="lazy"><figcaption>Escala vertical e horizontal</figcaption></figure>
+          <figure class="preview-card rev"><img src="assets/previews/oxigenio-digital.png" alt="Prévia sobre tráfego como oxigênio do digital" loading="lazy"><figcaption>O papel do tráfego no digital</figcaption></figure>
+          <figure class="preview-card rev"><img src="assets/previews/organico-pago.png" alt="Prévia comparando tráfego orgânico e tráfego pago" loading="lazy"><figcaption>Tráfego orgânico e pago</figcaption></figure>
+          <figure class="preview-card rev"><img src="assets/previews/primeiros-7-dias.png" alt="Prévia sobre o que observar nos primeiros sete dias de campanha" loading="lazy"><figcaption>O que observar nos primeiros 7 dias</figcaption></figure>
+        </div>
+      </div>
+      <button class="preview-arrow" type="button" data-preview-next aria-label="Próxima imagem">›</button>
     </div>
+    <div class="preview-dots" data-preview-dots aria-label="Selecionar prévia"></div>
   </div>
 </section>
 
@@ -785,6 +798,33 @@ if(ofSec&&fb){new IntersectionObserver(function(e){fb.style.display=e[0].isInter
       if(typeof fbq==='function'){fbq('trackCustom','ClickCTA',{placement:link.getAttribute('data-track')})}
     });
   });
+
+// Carrossel de prévias do produto
+(function(){
+  var track=document.querySelector('[data-preview-track]');
+  if(!track)return;
+  var slides=Array.prototype.slice.call(track.children);
+  var dots=document.querySelector('[data-preview-dots]');
+  var current=0;
+  slides.forEach(function(_,i){
+    var dot=document.createElement('button');
+    dot.type='button';dot.className='preview-dot'+(i===0?' is-active':'');
+    dot.setAttribute('aria-label','Ir para a prévia '+(i+1));
+    dot.addEventListener('click',function(){go(i)});
+    dots.appendChild(dot);
+  });
+  function go(index){
+    current=(index+slides.length)%slides.length;
+    track.style.transform='translateX(-'+(current*100)+'%)';
+    Array.prototype.forEach.call(dots.children,function(dot,i){dot.classList.toggle('is-active',i===current)});
+  }
+  document.querySelector('[data-preview-prev]').addEventListener('click',function(){go(current-1)});
+  document.querySelector('[data-preview-next]').addEventListener('click',function(){go(current+1)});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft')go(current-1);
+    if(e.key==='ArrowRight')go(current+1);
+  });
+})();
 </script>
 </body>
 </html>
