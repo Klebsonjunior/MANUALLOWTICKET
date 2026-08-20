@@ -411,6 +411,19 @@ fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1597085298620721&ev=PageView&noscript=1"/></noscript>
+<style>
+.preview-sec{padding:92px 0;background:var(--cream);border-top:1px solid rgba(16,35,24,.10);border-bottom:1px solid rgba(16,35,24,.10)}
+.preview-intro{max-width:680px;margin-bottom:38px}
+.preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+.preview-card{margin:0;background:#fff;border:1px solid rgba(16,35,24,.13);border-radius:16px;overflow:hidden;box-shadow:0 12px 30px rgba(16,35,24,.08)}
+.preview-card.preview-wide{grid-column:span 2}
+.preview-card img{display:block;width:100%;height:auto;background:#f7f3e8}
+.preview-card figcaption{padding:13px 17px 15px;color:var(--ink);font-size:14px;font-weight:700;letter-spacing:.01em}
+.lot-urgency{display:flex;flex-direction:column;gap:5px;margin:18px 0 4px;padding:14px 16px;border:1px solid rgba(196,135,0,.42);border-radius:10px;background:rgba(196,135,0,.10);color:var(--ink);font-size:13px;line-height:1.45}
+.lot-urgency strong{color:#8f6200;font-size:14px}
+.lot-urgency span{color:var(--muted)}
+@media(max-width:700px){.preview-sec{padding:68px 0}.preview-grid{grid-template-columns:1fr;gap:17px}.preview-card.preview-wide{grid-column:auto}.preview-card figcaption{font-size:13px}.lot-urgency{font-size:12.5px}}
+</style>
 </head>
 <body>
 
@@ -599,6 +612,26 @@ src="https://www.facebook.com/tr?id=1597085298620721&ev=PageView&noscript=1"/></
   </div>
 </section>
 
+<!-- PREVIAS DO PRODUTO -->
+<section class="preview-sec" id="previas">
+  <div class="w">
+    <p class="tag rev">Veja algumas partes do conteúdo</p>
+    <h2 class="sh rev">Por dentro do material.</h2>
+    <p class="sp rev preview-intro">Algumas prévias dos conteúdos para você entender o nível de organização e aplicação prática da oferta.</p>
+    <div class="preview-grid">
+      <figure class="preview-card preview-wide rev"><img src="assets/previews/modulos-overview.png" alt="Visão geral dos cinco conteúdos do Manual da Venda Low Ticket" loading="lazy"><figcaption>Visão geral dos conteúdos</figcaption></figure>
+      <figure class="preview-card rev"><img src="assets/previews/nicho-mercados.png" alt="Prévia sobre os três grandes mercados e o radar de crescimento" loading="lazy"><figcaption>Mercados e oportunidades de nicho</figcaption></figure>
+      <figure class="preview-card rev"><img src="assets/previews/regra-tres-camadas.png" alt="Prévia sobre a regra das três camadas de mercado, nicho e sub-nicho" loading="lazy"><figcaption>Mercado, nicho e sub-nicho</figcaption></figure>
+      <figure class="preview-card rev"><img src="assets/previews/escala-fases.png" alt="Prévia sobre as três fases de escala" loading="lazy"><figcaption>Fases de validação, otimização e escala</figcaption></figure>
+      <figure class="preview-card rev"><img src="assets/previews/ilusao-verdadeira-escala.png" alt="Prévia comparando ilusão e verdadeira escala" loading="lazy"><figcaption>Escala com controle</figcaption></figure>
+      <figure class="preview-card rev"><img src="assets/previews/escala-vertical-horizontal.png" alt="Prévia comparando escala vertical e escala horizontal" loading="lazy"><figcaption>Escala vertical e horizontal</figcaption></figure>
+      <figure class="preview-card preview-wide rev"><img src="assets/previews/oxigenio-digital.png" alt="Prévia sobre tráfego como oxigênio do digital" loading="lazy"><figcaption>O papel do tráfego no digital</figcaption></figure>
+      <figure class="preview-card rev"><img src="assets/previews/organico-pago.png" alt="Prévia comparando tráfego orgânico e tráfego pago" loading="lazy"><figcaption>Tráfego orgânico e pago</figcaption></figure>
+      <figure class="preview-card rev"><img src="assets/previews/primeiros-7-dias.png" alt="Prévia sobre o que observar nos primeiros sete dias de campanha" loading="lazy"><figcaption>O que observar nos primeiros 7 dias</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- OFERTAS -->
 <section class="offer-sec" id="ofertas">
   <div class="w">
@@ -623,9 +656,13 @@ src="https://www.facebook.com/tr?id=1597085298620721&ev=PageView&noscript=1"/></
         <div class="oc-price-row">
           <span class="oc-old" style="font-size:20px">R$97</span>
           <span class="oc-cur" style="color:var(--amber)">R$</span>
-          <span class="oc-price amber">20<span style="font-size:28px">,00</span></span>
+          <span class="oc-price amber">14<span style="font-size:28px">,67</span></span>
         </div>
         <div class="oc-note" style="color:rgba(240,165,0,.55)">Pagamento unico &nbsp;·&nbsp; Acesso imediato</div>
+        <div class="lot-urgency" role="note">
+          <strong>Preço promocional para os 100 primeiros clientes.</strong>
+          <span>67 pessoas já compraram. Adquira antes que esgote o lote promocional.</span>
+        </div>
 
         <div class="oc-sep">O que voce recebe</div>
         <ul class="oc-list">
