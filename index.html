@@ -436,23 +436,16 @@ footer a{color:#B8A880;text-decoration:underline}
 @media(max-width:900px){.mod-grid{grid-template-columns:1fr;gap:18px}.mod-top{height:175px}.mod-body{padding:25px 24px 28px}.mod-title{font-size:24px}.mod-topics li{font-size:15px}}
 @media(max-width:640px){.receive-sec{padding:76px 18px 84px}.receive-sec .sh{font-size:34px}.receive-sec .sp{font-size:16px}.mod-top{height:150px}.mod-body{padding:22px 20px 25px}.mod-topics{gap:9px;margin-top:19px;padding-top:15px}.mod-topics li{font-size:14px;line-height:1.5}}
 
-/* COVER CARD (substitui mockup de dashboard fake) */
-.cover-card{background:linear-gradient(135deg,#1A1208 0%,#241A0C 100%);border-radius:16px;padding:44px 40px;margin-bottom:32px;box-shadow:0 16px 48px rgba(0,0,0,.35);position:relative;overflow:hidden}
-.cover-card::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(184,135,10,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(184,135,10,.08) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
-.cover-top{position:relative;z-index:1;margin-bottom:32px}
-.cover-eyebrow{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:.2em;color:#9A8C70}
-.cover-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.02;letter-spacing:-.03em;color:#F5EDD6;margin-top:6px}
-.cover-title span{color:var(--amber)}
-.cover-path{position:relative;z-index:1;display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:32px}
-.cp-step{display:flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:#D9CFB8;background:rgba(255,255,255,.05);border:1px solid rgba(184,135,10,.25);border-radius:100px;padding:8px 16px}
-.cp-step span{color:var(--amber);font-weight:700}
-.cover-path i{color:#5C5340;font-style:normal}
-.cover-bottom{position:relative;z-index:1;display:flex;align-items:center;gap:20px;padding-top:24px;border-top:1px solid rgba(184,135,10,.2)}
-.cb-item{display:flex;align-items:baseline;gap:6px}
-.cb-item strong{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--amber)}
-.cb-item span{font-size:12px;color:#9A8C70}
-.cb-sep{width:1px;height:20px;background:rgba(184,135,10,.25)}
-@media(max-width:640px){.cover-card{padding:30px 22px}.cover-path{gap:8px}.cp-step{font-size:11.5px;padding:7px 12px}.cover-bottom{gap:14px;flex-wrap:wrap}}
+/* ROADMAP VERTICAL (substitui cover-card — menos decoração, mais restrito) */
+.roadmap{margin-bottom:32px;border-left:2px solid rgba(184,135,10,.25);padding-left:0}
+.rm-step{display:flex;gap:20px;padding:0 0 28px 0;position:relative}
+.rm-step:last-child{padding-bottom:0}
+.rm-num{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--g2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--muted2);margin-left:-21px;position:relative;z-index:1}
+.rm-active .rm-num{background:var(--amber);border-color:var(--amber);color:#1A1208}
+.rm-body{padding-top:6px}
+.rm-body strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--cream);margin-bottom:4px}
+.rm-body span{display:block;font-size:13.5px;color:var(--muted2);line-height:1.5;max-width:440px}
+@media(max-width:640px){.rm-body span{max-width:none}}
 </style>
 
 <!-- Meta Pixel -->
@@ -941,6 +934,34 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
 </style><style id="copy-upgrade">
 .hero-kicker{margin:0 0 18px;color:#D8B58C;font-size:12px;letter-spacing:.13em;font-weight:700}.hero-kicker+ .h1{margin-top:0}.pain-scene{max-width:720px;margin:30px 0 42px;padding:26px 30px;border-left:2px solid #D8B58C;background:linear-gradient(90deg,rgba(216,181,140,.09),transparent);color:#E3E7E8;font-size:18px;line-height:1.7}.pain-scene p{margin:0 0 14px}.pain-scene p:last-child{margin-bottom:0}.pain-beat{color:#D8B58C;font-weight:700}.order-stripe{padding-top:60px;padding-bottom:60px}.order-stripe p span{color:#1A2025}.order-stripe p strong{color:#080B10}.order-map{display:flex;align-items:center;justify-content:center;gap:11px;flex-wrap:wrap;margin:26px auto 0;max-width:980px;color:#161B1F;font-size:13px;font-weight:750;letter-spacing:.02em}.order-map span{padding:9px 12px;border:1px solid rgba(8,11,16,.24);border-radius:999px;background:rgba(255,255,255,.12)}.order-map i{font-style:normal;font-size:17px}.module-details{margin-top:18px;border-top:1px solid rgba(244,240,233,.14);padding-top:13px}.module-details summary{cursor:pointer;list-style:none;color:#D8B58C;font-size:13px;font-weight:700}.module-details summary::-webkit-details-marker{display:none}.module-details summary:after{content:'+';float:right;font-size:18px;font-weight:400}.module-details[open] summary:after{content:'−'}.module-details .mod-topics{margin-top:16px}.value-stack{margin:22px 0 26px;border-top:1px solid rgba(244,240,233,.14);border-bottom:1px solid rgba(244,240,233,.14);padding:14px 0}.value-stack>div{display:flex;justify-content:space-between;gap:18px;padding:6px 0;color:#C0C7CC;font-size:13px}.value-stack>div strong{color:#F4F0E9}.value-stack .value-total{margin-top:7px;padding-top:10px;border-top:1px dashed rgba(244,240,233,.18);color:#D8B58C}.value-stack .value-total strong{color:#D8B58C;font-size:18px}.value-stack .value-today{margin-top:3px;color:#FFB5AE;font-size:15px;font-weight:750}.value-stack .value-today strong{color:#FFB5AE;font-size:22px}.value-stack small{display:block;margin-top:9px;color:#FFB5AE;font-size:12px;font-weight:700}.oc-before{margin-top:14px;color:#AEB7BE;font-size:14px}.oc-before s{color:#D8B58C}.oc-price-row{margin-top:1px}@media(max-width:640px){.hero-kicker{font-size:11px;line-height:1.5}.pain-scene{padding:21px 20px;font-size:16px}.order-map{gap:7px;font-size:12px}.order-map span{padding:7px 9px}.order-map i{font-size:14px}.module-details summary{font-size:13px}.value-stack>div{font-size:13px}}
 </style>
+<style id="restraint-pass">
+/* RESTRIÇÃO — menos decoração no hero, mais como as referências (preto/branco, sem grid pattern nem glow forte) */
+.hero::before{opacity:.35}
+.hero-glow{opacity:.4}
+.hero::after{opacity:.5}
+
+/* SEÇÃO CLARA DE RESPIRO — alterna com o preto pesado, como a referência faz na apresentação dos produtos */
+.receive-sec{background:linear-gradient(180deg,#F2EDE3 0%,#EAE4D8 100%)!important}
+.receive-sec .tag{color:#8A6A1E}
+.receive-sec .sh{color:#1A1208}
+.receive-sec .sp{color:#4F493D!important}
+.receive-sec .sp strong{color:#1A1208}
+.roadmap{border-left-color:rgba(184,135,10,.35)}
+.rm-num{background:#EAE4D8;border-color:#D5CEBC;color:#7A5A00}
+.rm-active .rm-num{background:#B8870A;border-color:#B8870A;color:#FAF6EE}
+.rm-body strong{color:#1A1208}
+.rm-body span{color:#5C5340}
+.mod{background:#F7F3EA;border-color:#D5CEBC}
+.mod-body{background:none!important}
+.mod:hover{border-color:rgba(184,135,10,.5)}
+.mod-title{color:#1A1208}
+.mod-desc{color:#5C5340!important}
+.mod-topics{border-top-color:#D5CEBC}
+.mod-topics li{color:#4F493D!important}
+.module-details summary{color:#8A6A1E!important}
+.module-details{border-top-color:#D5CEBC!important}
+@media(max-width:640px){.hero::before{opacity:.25}.hero-glow{opacity:.3}}
+</style>
 </head>
 <body>
 
@@ -983,7 +1004,7 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
       <p class="hero-sub rev">
         Você cria um produto. Divulga. Coloca o link. Talvez até tente anunciar.<br><br>
         E quando a venda não vem, começa a dúvida: <strong>será que o problema está no produto, no nicho, no preço, na página ou no público?</strong><br><br>
-        O Manual da Venda Low Ticket 2026 coloca essas peças na ordem — para você saber o que analisar, o que executar e quando avançar.
+        O Manual da Venda Low Ticket 2026 coloca essas peças na ordem — os 3 primeiros produtos levam você da ideia a uma oferta formulada e publicada <strong>no mesmo dia.</strong>
       </p>
 
       <div class="h-timer rev">
@@ -1006,7 +1027,7 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
 
       <div class="hero-nums rev">
         <div class="hn"><div class="hn-n">30<span style="font-size:12px">d</span></div><div class="hn-l">Garantia</div></div>
-        <div class="hn"><div class="hn-n">5+1</div><div class="hn-l">Conteúdos</div></div>
+        <div class="hn"><div class="hn-n">5+1</div><div class="hn-l">Produtos</div></div>
         <div class="hn"><div class="hn-n">R$14,67</div><div class="hn-l">Apenas</div></div>
         <div class="hn"><div class="hn-n">1</div><div class="hn-l">Sequência</div></div>
       </div>
@@ -1088,31 +1109,37 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
     <p class="tag rev">O CAMINHO PARA A SUA PRIMEIRA DECISÃO</p>
     <h2 class="sh rev">Cinco decisões para parar<br>de começar do zero.</h2>
     <p class="sp rev">O Manual não tenta ensinar tudo de uma vez. Ele organiza as decisões que vêm antes, durante e depois da primeira oferta. <strong>Você entende o que analisar, o que executar e quando avançar.</strong></p>
-    <div class="cover-card rev">
-      <div class="cover-top">
-        <span class="cover-eyebrow">MANUAL DA</span>
-        <h3 class="cover-title">VENDA<br>LOW TICKET<br><span>2026</span></h3>
+    <div class="roadmap rev">
+      <div class="rm-step">
+        <div class="rm-num">01</div>
+        <div class="rm-body"><strong>Modelo</strong><span>Por que vender por R$20 pode ser mais lucrativo que vender por R$500</span></div>
       </div>
-      <div class="cover-path">
-        <div class="cp-step"><span>01</span>Escolha</div><i>→</i>
-        <div class="cp-step"><span>02</span>Empacota</div><i>→</i>
-        <div class="cp-step"><span>03</span>Publica</div><i>→</i>
-        <div class="cp-step"><span>04</span>Divulga</div><i>→</i>
-        <div class="cp-step"><span>05</span>Decide</div>
+      <div class="rm-step">
+        <div class="rm-num">02</div>
+        <div class="rm-body"><strong>Nicho e produto</strong><span>Como encontrar um nicho com demanda real e criar o produto do zero</span></div>
       </div>
-      <div class="cover-bottom">
-        <div class="cb-item"><strong>5</strong><span>conteúdos</span></div>
-        <div class="cb-sep"></div>
-        <div class="cb-item"><strong>+1</strong><span>bônus</span></div>
-        <div class="cb-sep"></div>
-        <div class="cb-item"><strong>1</strong><span>sequência</span></div>
+      <div class="rm-step">
+        <div class="rm-num">03</div>
+        <div class="rm-body"><strong>Oferta e divulgação</strong><span>Como transformar o produto em algo fácil de entender e comprar</span></div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-num">04</div>
+        <div class="rm-body"><strong>Tráfego</strong><span>Como levar gente até a oferta, pago ou orgânico</span></div>
+      </div>
+      <div class="rm-step rm-active">
+        <div class="rm-num">05</div>
+        <div class="rm-body"><strong>Próximos testes</strong><span>O que observar depois da primeira venda pra decidir o que vem a seguir</span></div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-num">+1</div>
+        <div class="rm-body"><strong>Bônus · Lançamento</strong><span>Como estruturar o lançamento assim que a oferta estiver pronta</span></div>
       </div>
     </div>
       <div class="mod-grid">
         <article class="mod rev">
-          <div class="mod-top mt-base"><div class="mod-badge mb-base">Conteúdo 01</div><img class="mod-image" src="assets/conteudo-01-low-ticket.webp" alt="Visual sobre o modelo Low Ticket" loading="lazy"></div>
+          <div class="mod-top mt-base"><div class="mod-badge mb-base">Produto 01</div><img class="mod-image" src="assets/conteudo-01-low-ticket.webp" alt="Visual sobre o modelo Low Ticket" loading="lazy"></div>
           <div class="mod-body">
-            <div class="mod-tag">Conteúdo 01</div>
+            <div class="mod-tag">Produto 01</div>
             <div class="mod-title">Entenda o modelo antes de tentar vender</div>
             <div class="mod-desc">Você deixa de tentar vender sem entender como o Low Ticket funciona e quais decisões vêm primeiro.</div>
             <details class="module-details"><summary>Veja tudo o que você vai aprender</summary>
@@ -1123,9 +1150,9 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
           </div>
         </article>
         <article class="mod rev">
-          <div class="mod-top mt-base"><div class="mod-badge mb-base">Conteúdo 02</div><img class="mod-image" src="assets/conteudo-02-nicho-ia.webp" alt="Visual sobre nicho e criação de produto com inteligência artificial" loading="lazy"></div>
+          <div class="mod-top mt-base"><div class="mod-badge mb-base">Produto 02</div><img class="mod-image" src="assets/conteudo-02-nicho-ia.webp" alt="Visual sobre nicho e criação de produto com inteligência artificial" loading="lazy"></div>
           <div class="mod-body">
-            <div class="mod-tag">Conteúdo 02</div>
+            <div class="mod-tag">Produto 02</div>
             <div class="mod-title">Descubra o que vender e para quem vender</div>
             <div class="mod-desc">Do nicho à criação do produto com IA, você organiza a oportunidade antes de investir tempo na produção.</div>
             <details class="module-details"><summary>Veja tudo o que você vai aprender</summary>
@@ -1136,9 +1163,9 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
           </div>
         </article>
         <article class="mod rev">
-          <div class="mod-top mt-prem"><div class="mod-badge mb-prem">Conteúdo 03</div><img class="mod-image" src="assets/conteudo-03-trafego.webp" alt="Visual sobre tráfego pago e orgânico" loading="lazy"></div>
+          <div class="mod-top mt-prem"><div class="mod-badge mb-prem">Produto 03</div><img class="mod-image" src="assets/conteudo-03-trafego.webp" alt="Visual sobre tráfego pago e orgânico" loading="lazy"></div>
           <div class="mod-body">
-            <div class="mod-tag">Conteúdo 03</div>
+            <div class="mod-tag">Produto 03</div>
             <div class="mod-title">Monte a oferta e escolha como divulgar</div>
             <div class="mod-desc">Você conecta produto, promessa, página e o primeiro caminho de divulgação sem depender de links soltos.</div>
             <details class="module-details"><summary>Veja tudo o que você vai aprender</summary>
@@ -1149,9 +1176,9 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
           </div>
         </article>
         <article class="mod rev">
-          <div class="mod-top mt-prem"><div class="mod-badge mb-prem">Conteúdo 04</div><img class="mod-image" src="assets/conteudo-04-meta-ads.webp" alt="Visual sobre campanhas no Aprenda o básico do tráfego antes de investir" loading="lazy"></div>
+          <div class="mod-top mt-prem"><div class="mod-badge mb-prem">Produto 04</div><img class="mod-image" src="assets/conteudo-04-meta-ads.webp" alt="Visual sobre campanhas no Aprenda o básico do tráfego antes de investir" loading="lazy"></div>
           <div class="mod-body">
-            <div class="mod-tag">Conteúdo 04</div>
+            <div class="mod-tag">Produto 04</div>
             <div class="mod-title">Aprenda o básico do tráfego pago antes de investir</div>
             <div class="mod-desc">Entenda campanha, público, criativo, orçamento e métricas antes de colocar dinheiro em anúncios.</div>
             <details class="module-details"><summary>Veja tudo o que você vai aprender</summary>
@@ -1162,9 +1189,9 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
           </div>
         </article>
         <article class="mod rev">
-          <div class="mod-top mt-prem"><div class="mod-badge mb-prem">Conteúdo 05</div><img class="mod-image" src="assets/conteudo-05-escalar.webp" alt="Visual sobre escala de produtos e vendas" loading="lazy"></div>
+          <div class="mod-top mt-prem"><div class="mod-badge mb-prem">Produto 05</div><img class="mod-image" src="assets/conteudo-05-escalar.webp" alt="Visual sobre escala de produtos e vendas" loading="lazy"></div>
           <div class="mod-body">
-            <div class="mod-tag">Conteúdo 05</div>
+            <div class="mod-tag">Produto 05</div>
             <div class="mod-title">Saiba o que testar depois da primeira venda</div>
             <div class="mod-desc">Você aprende a interpretar sinais, otimizar e escolher os próximos testes sem trocar tudo de uma vez.</div>
             <details class="module-details"><summary>Veja tudo o que você vai aprender</summary>
@@ -1175,11 +1202,11 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
           </div>
         </article>
         <article class="mod rev">
-          <div class="mod-top mt-bonus"><div class="mod-badge mb-bonus">Bônus especial</div><span class="mod-emoji">&#x1F381;</span></div>
+          <div class="mod-top mt-bonus"><div class="mod-badge mb-bonus">Bônus</div><span class="mod-emoji">&#x1F381;</span></div>
           <div class="mod-body">
-            <div class="mod-tag">Bônus especial</div>
-            <div class="mod-title">Plano de execução em 30 dias</div>
-            <div class="mod-desc">Um calendário complementar para transformar a leitura em ações semanais e tirar o projeto do papel.</div>
+            <div class="mod-tag">Produto 06 · Bônus</div>
+            <div class="mod-title">Estratégia de Lançamento</div>
+            <div class="mod-desc">Como estruturar o lançamento da sua oferta assim que ela estiver pronta, em vez de só colocar no ar e esperar.</div>
           </div>
         </article>
       </div>
@@ -1250,30 +1277,30 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
     <div class="offer-heading">
       <p class="tag rev">AGORA FAÇA UMA CONTA SIMPLES</p>
       <h2 class="sh rev">Você poderia procurar cada parte separadamente.<br><em>Ou receber tudo em uma única sequência.</em></h2>
-      <p class="sp rev">Um conteúdo sobre produto. Outro sobre nicho. Outro sobre tráfego. Outro sobre Meta Ads. Outro sobre escala. O Manual reúne essas etapas em um único material, para você parar de juntar peças soltas.</p>
+      <p class="sp rev">Um produto sobre modelo. Outro sobre nicho. Outro sobre oferta. Outro sobre tráfego. Outro sobre escala. Cada um venderia separado — juntos, é uma sequência, não uma pilha de PDF solto.</p>
     </div>
 
     <div class="offer-split">
       <div class="offer-copy rev">
-        <span class="offer-kicker">O QUE ENTRA NO SEU ACESSO</span>
-        <h3>Não é mais conteúdo para acumular.</h3>
-        <p>É uma sequência para consultar quando você estiver diante de uma decisão: escolher o problema, montar a oferta, divulgar ou interpretar os primeiros sinais.</p>
+        <span class="offer-kicker">O QUE VOCÊ ESTÁ COMPRANDO</span>
+        <h3>5 produtos diferentes + 1 bônus. Não é um curso genérico dividido em módulos.</h3>
+        <p>Cada um resolve uma parte específica: um te dá o modelo, outro o nicho e o produto, outro a oferta e a divulgação, outro o tráfego, outro os próximos testes — e o bônus te leva pelo lançamento. Separados, teriam preço e formato próprios. Juntos, é uma sequência.</p>
         <div class="offer-includes">
-          <div><span>01</span><strong>5 conteúdos centrais</strong><small>da base do modelo aos próximos testes</small></div>
-          <div><span>02</span><strong>1 bônus de execução</strong><small>um plano de 30 dias para sair da leitura</small></div>
-          <div><span>03</span><strong>Acesso imediato</strong><small>consulte no seu ritmo e volte quando precisar</small></div>
+          <div><span>01</span><strong>5 produtos + 1 bônus</strong><small>cada um com seu próprio passo a passo</small></div>
+          <div><span>02</span><strong>Acesso imediato</strong><small>consulte no seu ritmo e volte quando precisar</small></div>
+          <div><span>03</span><strong>Formule e publique hoje</strong><small>os 3 primeiros produtos levam você da ideia à oferta no ar no mesmo dia</small></div>
           <div><span>04</span><strong>30 dias para avaliar</strong><small>com garantia incondicional dentro das condições</small></div>
         </div>
-        <div class="value-stack" aria-label="Comparação de valor dos conteúdos">
-          <div><span>Conteúdo 01</span><strong>R$17</strong></div>
-          <div><span>Conteúdo 02</span><strong>R$17</strong></div>
-          <div><span>Conteúdo 03</span><strong>R$17</strong></div>
-          <div><span>Conteúdo 04</span><strong>R$17</strong></div>
-          <div><span>Conteúdo 05</span><strong>R$12</strong></div>
-          <div><span>Bônus</span><strong>R$17</strong></div>
-          <div class="value-total"><span>TOTAL</span><strong>R$97</strong></div>
-          <div class="value-today"><span>HOJE</span><strong>R$14,67</strong></div>
-          <small>Menos de R$2,50 por conteúdo — no Lote 1.</small>
+        <div class="value-stack" aria-label="Comparação de valor dos produtos">
+          <div><span>Produto 01 · O Modelo</span><strong>R$20</strong></div>
+          <div><span>Produto 02 · Nicho e Produto</span><strong>R$20</strong></div>
+          <div><span>Produto 03 · Oferta e Divulgação</span><strong>R$20</strong></div>
+          <div><span>Produto 04 · Tráfego</span><strong>R$20</strong></div>
+          <div><span>Produto 05 · Escala</span><strong>R$20</strong></div>
+          <div><span>Bônus · Estratégia de Lançamento</span><strong>R$20</strong></div>
+          <div class="value-total"><span>SE COMPRADOS SEPARADOS</span><strong>R$120</strong></div>
+          <div class="value-today"><span>NO PACOTE, HOJE</span><strong>R$14,67</strong></div>
+          <small>5 produtos + 1 bônus pelo preço de menos de 1 — e ainda no Lote 1.</small>
         </div>
         <div class="lot-ladder">
           <div class="ll-item ll-active"><span>Lote 1 · agora</span><strong>R$14,67</strong></div>
@@ -1283,9 +1310,9 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
       </div>
 
       <div class="oc prem rev" style="position:relative">
-        <div class="save-ribbon">ACESSO ÚNICO</div>
+        <div class="save-ribbon">5 PRODUTOS + 1 BÔNUS</div>
         <span class="oc-label p">Manual da Venda Low Ticket 2026</span>
-        <div class="oc-before">de <s>R$97</s> por</div>
+        <div class="oc-before">de <s>R$120</s> por</div>
         <div class="oc-price-row">
           <span class="oc-cur">R$</span>
           <span class="oc-price">14<span style="font-size:28px">,67</span></span>
@@ -1294,14 +1321,14 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
         <div class="lot-urgency" role="note"><strong>Lote 1 · valor de entrada.</strong><span>Depois desse lote, o preço passa a R$27.</span></div>
         <div class="oc-sep">O que você recebe</div>
         <ul class="oc-list">
-          <li><span class="ck">✓</span><span><strong>Conteúdo 01</strong> &nbsp; O jogo antes da oferta</span></li>
-          <li><span class="ck">✓</span><span><strong>Conteúdo 02</strong> &nbsp; Problema, nicho e produto</span></li>
-          <li><span class="ck">✓</span><span><strong>Conteúdo 03</strong> &nbsp; Oferta e divulgação</span></li>
-          <li><span class="ck">✓</span><span><strong>Conteúdo 04</strong> &nbsp; Tráfego antes de investir</span></li>
-          <li><span class="ck">✓</span><span><strong>Conteúdo 05</strong> &nbsp; Próximos testes e crescimento</span></li>
-          <li><span class="ck">✓</span><span><strong>Bônus</strong> &nbsp; Plano de Execução em 30 Dias</span></li>
+          <li><span class="ck">✓</span><span><strong>Produto 01</strong> &nbsp; O Modelo Low Ticket — o jogo antes da oferta</span></li>
+          <li><span class="ck">✓</span><span><strong>Produto 02</strong> &nbsp; Nicho e Produto do Zero</span></li>
+          <li><span class="ck">✓</span><span><strong>Produto 03</strong> &nbsp; Monte a oferta e escolha como divulgar</span></li>
+          <li><span class="ck">✓</span><span><strong>Produto 04</strong> &nbsp; Tráfego: pago e orgânico</span></li>
+          <li><span class="ck">✓</span><span><strong>Produto 05</strong> &nbsp; O que testar depois da primeira venda</span></li>
+          <li><span class="ck">✓</span><span><strong>Bônus</strong> &nbsp; Estratégia de Lançamento</span></li>
         </ul>
-        <a href="https://pay.kiwify.com.br/avFrC1J" class="oc-btn prem-b" data-track="cta_offer">Quero começar pelo próximo passo <span>↗</span></a>
+        <a href="https://pay.kiwify.com.br/avFrC1J" class="oc-btn prem-b" data-track="cta_offer">Quero os 5 produtos agora <span>↗</span></a>
         <div class="oc-subnote">Sem mensalidade &nbsp;·&nbsp; Acesso vitalício &nbsp;·&nbsp; 30 dias de garantia</div>
       </div>
     </div>
@@ -1346,7 +1373,7 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
       <div class="cu"><span class="cn" id="cd-s">--</span><span class="cl">seg</span></div>
     </div>
     <div class="access-points rev">
-      <span>Método completo</span><span>5 conteúdos + bônus</span><span>Pagamento único</span><span>Acesso imediato</span>
+      <span>5 produtos + 1 bônus</span><span>Método completo</span><span>Pagamento único</span><span>Acesso imediato</span>
     </div>
     <a href="https://pay.kiwify.com.br/avFrC1J" class="btn-hero rev" data-track="cta_access" style="display:inline-flex;max-width:360px">
       Garantir no Lote 1 — R$14,67
@@ -1361,7 +1388,7 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
     <p class="tag rev">Dúvidas</p>
     <h2 class="sh rev">Respostas diretas.</h2>
     <div class="faq-list">
-      <div class="fi rev"><button class="fb" onclick="fq(this)">É curso ou manual digital?<span class="fi-ic">+</span></button><div class="fa">Você recebe acesso a um manual digital dividido em cinco conteúdos e ao Plano de Execução em 30 Dias. <strong>Não é uma promessa de resultado automático.</strong> É uma estrutura para estudar, aplicar e acompanhar cada etapa do processo.</div></div>
+      <div class="fi rev"><button class="fb" onclick="fq(this)">É curso ou manual digital?<span class="fi-ic">+</span></button><div class="fa">Você recebe acesso a 5 produtos digitais, cada um com seu próprio passo a passo, mais 1 bônus de Estratégia de Lançamento. <strong>Não é uma promessa de resultado automático.</strong> É uma sequência para estudar, aplicar e acompanhar cada etapa do processo.</div></div>
       <div class="fi rev"><button class="fb" onclick="fq(this)">Nunca fiz uma venda. Serve para mim?<span class="fi-ic">+</span></button><div class="fa">Sim. O manual começa pela estrutura do modelo e avança progressivamente. <strong>Você não precisa ter experiência, audiência ou produto pronto.</strong> Pode começar pela divulgação orgânica; anúncios pagos, se escolhidos, exigem um investimento separado.</div></div>
       <div class="fi rev"><button class="fb" onclick="fq(this)">Para quem é o Manual da Venda Low Ticket 2026?<span class="fi-ic">+</span></button><div class="fa">Para quem já tentou vender na internet, como afiliado ou com produto próprio, e continua sem saber qual etapa está travando. Também serve para quem ainda não tem produto e precisa organizar o começo.</div></div>
       <div class="fi rev"><button class="fb" onclick="fq(this)">Como recebo o acesso após a compra?<span class="fi-ic">+</span></button><div class="fa"><strong>Imediatamente.</strong> Assim que o pagamento é confirmado, você recebe o link por e-mail.</div></div>
@@ -1409,7 +1436,7 @@ body{font-size:16px;line-height:1.6;letter-spacing:0;color:var(--read-body)}
 
 <script>
 (function(){
-  var msgs=['Sequência clara','Comece pela etapa certa','Para quem já tentou vender','Sem mensalidade','Acesso imediato','5 conteúdos + bônus','Manual direto ao ponto','30 dias para avaliar'];
+  var msgs=['Sequência clara','Comece pela etapa certa','Para quem já tentou vender','Sem mensalidade','Acesso imediato','5 produtos + 1 bônus','Direto ao ponto','30 dias de garantia'];
   var html='';
   for(var i=0;i<2;i++){msgs.forEach(function(m){html+='<div class="mq-item"><span class="mq-dot"></span><span class="mq-em">'+m+'</span></div><div class="mq-sep">&#xB7;</div>'})}
   var t=document.getElementById('mq-track');if(t)t.innerHTML=html;
