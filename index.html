@@ -43,8 +43,9 @@ html{color-scheme:dark;scroll-behavior:smooth}
   --blue:#7FA8D8;
   --green:#5FBF7A;
   --red:#D8746B;
-  --cta:#C9A15A;
-  --cta-ink:#14100A;
+  --cta:#E64B43;
+  --cta-hover:#F0605A;
+  --cta-ink:#FFFFFF;
 }
 body{font-family:'Inter',Arial,sans-serif;background:var(--bg);color:var(--cream);line-height:1.5;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -55,15 +56,16 @@ section{padding:88px 24px}
 .sh{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.02em;color:var(--cream);margin-bottom:16px}
 .sp{font-size:16.5px;line-height:1.75;color:var(--muted)}
 .sp strong{color:var(--cream)}
-.btn{background:var(--cta);color:var(--cta-ink);font-size:15px;font-weight:700;padding:16px 30px;border-radius:8px;display:inline-flex;align-items:center;gap:9px;text-decoration:none;box-shadow:0 10px 30px -8px rgba(201,161,90,.4);border:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 14px 34px -8px rgba(201,161,90,.5)}
+.btn{background:var(--cta);color:var(--cta-ink);font-size:15px;font-weight:700;padding:16px 30px;border-radius:8px;display:inline-flex;align-items:center;gap:9px;text-decoration:none;box-shadow:0 10px 30px -8px rgba(230,75,67,.45);border:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);background:var(--cta-hover);box-shadow:0 14px 34px -8px rgba(230,75,67,.55)}
 .btn svg{width:15px;height:15px;flex-shrink:0}
 .rev{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
 .rev.vis{opacity:1;transform:none}
 
 /* MARQUEE */
-.marquee{background:#171A1E;border-bottom:1px solid var(--border);overflow:hidden;white-space:nowrap;padding:9px 0}
-.marquee-track{display:inline-block;animation:scroll 26s linear infinite;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.03em;color:var(--amber)}
+.marquee{background:#1E0E0C;border-bottom:1px solid rgba(230,75,67,.2);overflow:hidden;white-space:nowrap;padding:9px 0}
+.marquee-track{display:inline-block;animation:scroll 26s linear infinite;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.03em;color:#FF8177}
+.marquee-track span i{color:#B5433C;font-style:normal;margin-right:6px}
 .marquee-track span{margin:0 26px}
 .marquee-track span i{color:#4A5568;font-style:normal;margin-right:6px}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -76,7 +78,8 @@ section{padding:88px 24px}
 .avatar img{width:100%;height:100%;object-fit:cover}
 .kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(201,161,90,.1);border:1px solid rgba(201,161,90,.25);color:var(--amber2);font-size:12px;font-weight:600;letter-spacing:.03em;padding:7px 16px;border-radius:100px;margin-bottom:26px}
 .kicker i{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;box-shadow:0 0 8px var(--green)}
-.h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.16;letter-spacing:-.02em;margin-bottom:22px;color:#F5F4F2}
+.hero-eyebrow{font-size:16px;color:var(--muted);margin-bottom:14px;max-width:440px;margin-left:auto;margin-right:auto}
+.h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,4.4vw,40px);line-height:1.2;letter-spacing:-.02em;margin-bottom:20px;color:#F5F4F2;max-width:620px;margin-left:auto;margin-right:auto}
 .h1 em{font-style:normal;color:var(--amber)}
 .hero-sub{font-size:16.5px;line-height:1.72;color:var(--muted);max-width:520px;margin:0 auto 32px}
 .hero-sub strong{color:var(--cream)}
@@ -115,46 +118,23 @@ section{padding:88px 24px}
 .qf-col li::before{content:'';position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--muted2)}
 .qf-note{margin-top:26px;font-size:13.5px;color:var(--muted2);font-style:italic;text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
 
-/* PRODUCTS (azul) */
+/* PRODUCTS (azul) — cards grandes com resumo, substituem roadmap fino + prints reais */
 .products-sec{background:linear-gradient(180deg,var(--bg2) 0%,#0A0F1A 100%);border-top:1px solid var(--border)}
 .products-sec .tag{color:var(--blue);text-align:center}
 .products-sec .sh{text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
-.products-sec .sp.center{text-align:center;max-width:620px;margin:0 auto 40px}
-.roadmap{max-width:640px;margin:0 auto 48px;border-left:2px solid var(--border-blue)}
-.rm-step{display:flex;gap:18px;padding:0 0 24px 0}
-.rm-step:last-child{padding-bottom:0}
-.rm-num{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--panel-blue);border:1px solid var(--border-blue);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:12px;font-weight:600;color:var(--blue);margin-left:-20px}
-.rm-active .rm-num{background:var(--blue);border-color:var(--blue);color:#0A0F1A}
-.rm-body{padding-top:6px}
-.rm-body strong{display:block;font-size:15.5px;font-weight:600;color:var(--cream);margin-bottom:3px}
-.rm-body span{display:block;font-size:13.5px;color:var(--muted);line-height:1.5}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--panel-blue);border:1px solid var(--border-blue);border-radius:12px;padding:24px;transition:border-color .2s}
-.card:hover{border-color:rgba(127,168,216,.35)}
-.card-num{font-family:'DM Mono',monospace;font-size:11px;color:#4E6488;margin-bottom:10px;display:block}
-.card-ic{width:36px;height:36px;border-radius:8px;background:rgba(127,168,216,.13);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--blue)}
-.card h4{font-size:15px;font-weight:600;margin-bottom:8px;color:var(--cream)}
-.card p{font-size:13px;line-height:1.6;color:#8891A3}
-.card.bonus{background:rgba(201,161,90,.06);border-color:rgba(201,161,90,.28)}
-.card.bonus .card-ic{background:rgba(201,161,90,.15);color:var(--amber)}
-.card.bonus .card-num{color:var(--amber)}
-
-/* PREVIEWS */
-.preview-sec{background:var(--bg);text-align:center}
-.preview-sec .tag,.preview-sec .sh{text-align:center}
-.preview-sec .sh{max-width:640px;margin-left:auto;margin-right:auto}
-.preview-sec .sp{max-width:600px;margin:0 auto}
-.preview-carousel{position:relative;display:flex;align-items:center;gap:14px;max-width:880px;margin:36px auto 0}
-.preview-viewport{flex:1;overflow:hidden;border-radius:12px;background:var(--panel);border:1px solid var(--border)}
-.preview-track{display:flex;transition:transform .4s ease}
-.preview-card{flex:0 0 100%;width:100%;margin:0;background:var(--panel)}
-.preview-card img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;background:#161A1F}
-.preview-card figcaption{padding:14px 18px;color:var(--muted);font-size:12px;font-family:'DM Mono',monospace;letter-spacing:.02em}
-.preview-arrow{flex:0 0 42px;width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:var(--panel);color:var(--cream);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center}
-.preview-arrow:hover{border-color:var(--amber);color:var(--amber)}
-.preview-dots{display:flex;justify-content:center;gap:7px;margin-top:20px}
-.preview-dot{width:6px;height:6px;border-radius:50%;background:var(--border);border:none;cursor:pointer;padding:0}
-.preview-dot.is-active{background:var(--amber);width:18px;border-radius:4px}
+.products-sec .sp.center{text-align:center;max-width:620px;margin:0 auto 44px}
+.cards-big{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:980px;margin:0 auto}
+.cardb{background:var(--panel-blue);border:1px solid var(--border-blue);border-radius:14px;padding:32px;transition:border-color .2s,transform .2s}
+.cardb:hover{border-color:rgba(127,168,216,.4);transform:translateY(-2px)}
+.cardb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.cardb-num{font-family:'DM Mono',monospace;font-size:12px;color:#5E7BA8;letter-spacing:.04em}
+.cardb-ic{width:44px;height:44px;border-radius:10px;background:rgba(127,168,216,.14);display:flex;align-items:center;justify-content:center;color:var(--blue)}
+.cardb h4{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;margin-bottom:12px;color:var(--cream)}
+.cardb p{font-size:14.5px;line-height:1.68;color:#9AA5B5}
+.cardb.bonus{background:rgba(201,161,90,.07);border-color:rgba(201,161,90,.3)}
+.cardb.bonus .cardb-ic{background:rgba(201,161,90,.16);color:var(--amber)}
+.cardb.bonus .cardb-num{color:var(--amber2)}
+@media(max-width:760px){.cards-big{grid-template-columns:1fr}.cardb{padding:26px 24px}}
 
 /* QUALIFY (repeat vars ok) */
 
@@ -289,8 +269,9 @@ footer a:hover{color:var(--amber)}
   <div class="inner">
     <div class="avatar rev"><img src="assets/hero-foto.jpg" alt="Autor do Manual da Venda Low Ticket 2026"></div>
     <div class="kicker rev"><i></i> LOTE 1 · ACESSO IMEDIATO</div>
-    <h1 class="h1 rev">Você já tentou vender.<br>O que faltou foi <em>saber onde insistir.</em></h1>
-    <p class="hero-sub rev">Você publicou, divulgou, esperou — e ficou com a mesma dúvida de sempre: <strong>o problema está no produto, no nicho, na oferta ou na divulgação?</strong> O Manual organiza isso em 5 produtos + 1 bônus: os 3 primeiros levam você da ideia a uma oferta publicada <strong>no mesmo dia.</strong></p>
+    <p class="hero-eyebrow rev">Você cria. Divulga. Espera. E a venda não vem.</p>
+    <h1 class="h1 rev">Um manual com 5 produtos + 1 bônus pra <em>formular e publicar sua oferta</em> — no mesmo dia.</h1>
+    <p class="hero-sub rev">Sem enrolação: você segue a ordem certa pra descobrir se o problema está no produto, no nicho, na oferta ou na divulgação — <strong>e corrige antes de perder mais tempo.</strong></p>
     <a href="#ofertas" class="btn rev">Garantir no Lote 1 — R$14,67 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     <span class="hero-meta rev">Pagamento único · Sem mensalidade · 30 dias de garantia</span>
   </div>
@@ -374,78 +355,38 @@ footer a:hover{color:var(--amber)}
     <span class="tag rev">O QUE VOCÊ ESTÁ COMPRANDO</span>
     <h2 class="sh rev">5 produtos diferentes + 1 bônus.</h2>
     <p class="sp center rev">Não é um curso genérico dividido em módulos. Cada um resolve uma parte específica — separados, teriam preço e formato próprios. Juntos, é uma sequência.</p>
-    <div class="roadmap rev">
-      <div class="rm-step"><div class="rm-num">01</div><div class="rm-body"><strong>O Modelo</strong><span>Por que vender por R$20 pode ser mais lucrativo que vender por R$500</span></div></div>
-      <div class="rm-step"><div class="rm-num">02</div><div class="rm-body"><strong>Nicho e Produto</strong><span>Como encontrar um nicho com demanda real e criar o produto do zero, com apoio de IA</span></div></div>
-      <div class="rm-step"><div class="rm-num">03</div><div class="rm-body"><strong>Oferta e Divulgação</strong><span>Como transformar o produto em algo fácil de entender e comprar</span></div></div>
-      <div class="rm-step"><div class="rm-num">04</div><div class="rm-body"><strong>Tráfego</strong><span>O básico do tráfego pago antes de colocar dinheiro em anúncios</span></div></div>
-      <div class="rm-step rm-active"><div class="rm-num">05</div><div class="rm-body"><strong>Próximos Testes</strong><span>O que observar depois da primeira venda pra decidir o que vem a seguir</span></div></div>
-      <div class="rm-step"><div class="rm-num">+1</div><div class="rm-body"><strong>Bônus · Lançamento</strong><span>Como estruturar o lançamento assim que a oferta estiver pronta</span></div></div>
-    </div>
-    <div class="cards">
-      <div class="card rev">
-        <span class="card-num">01</span>
-        <div class="card-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+    <div class="cards-big">
+      <div class="cardb rev">
+        <div class="cardb-top"><span class="cardb-num">01</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div></div>
         <h4>O Modelo</h4>
-        <p>A lógica do volume e por que a maioria erra na escolha do modelo de venda.</p>
+        <p>Por que vender por R$20 pode ser mais lucrativo que vender por R$500. A lógica do volume, a matemática real por trás do low ticket, e por que a maioria erra na escolha do modelo antes mesmo de começar.</p>
       </div>
-      <div class="card rev">
-        <span class="card-num">02</span>
-        <div class="card-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg></div>
+      <div class="cardb rev">
+        <div class="cardb-top"><span class="cardb-num">02</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg></div></div>
         <h4>Nicho e Produto</h4>
-        <p>Do nicho à criação do produto com IA, antes de investir tempo na produção.</p>
+        <p>Como encontrar um nicho com demanda real e criar o produto do zero com apoio de inteligência artificial — sem gastar semanas pesquisando ou travando na primeira etapa.</p>
       </div>
-      <div class="card rev">
-        <span class="card-num">03</span>
-        <div class="card-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="cardb rev">
+        <div class="cardb-top"><span class="cardb-num">03</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div></div>
         <h4>Oferta e Divulgação</h4>
-        <p>Produto, promessa, página e o primeiro caminho de divulgação, sem depender de links soltos.</p>
+        <p>Como conectar produto, promessa, página e o primeiro caminho de divulgação numa oferta simples de publicar — sem depender de link solto ou sorte.</p>
       </div>
-      <div class="card rev">
-        <span class="card-num">04</span>
-        <div class="card-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="cardb rev">
+        <div class="cardb-top"><span class="cardb-num">04</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div></div>
         <h4>Tráfego</h4>
-        <p>Campanha, público, criativo, orçamento e métricas antes de colocar dinheiro em anúncios.</p>
+        <p>O básico de campanha, público, criativo, orçamento e métricas — pra você não colocar dinheiro em anúncio sem saber o que está fazendo.</p>
       </div>
-      <div class="card rev">
-        <span class="card-num">05</span>
-        <div class="card-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 17l3-6 4 3 5-9"/></svg></div>
+      <div class="cardb rev">
+        <div class="cardb-top"><span class="cardb-num">05</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 17l3-6 4 3 5-9"/></svg></div></div>
         <h4>Próximos Testes</h4>
-        <p>Interpretar sinais e escolher os próximos passos sem trocar tudo de uma vez.</p>
+        <p>Como interpretar os primeiros sinais depois da venda e decidir o que ajustar, sem trocar tudo de uma vez e perder o que já estava funcionando.</p>
       </div>
-      <div class="card bonus rev">
-        <span class="card-num">BÔNUS</span>
-        <div class="card-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="cardb bonus rev">
+        <div class="cardb-top"><span class="cardb-num">BÔNUS</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div></div>
         <h4>Estratégia de Lançamento</h4>
-        <p>Como estruturar o lançamento assim que a oferta estiver pronta, em vez de só publicar e esperar.</p>
+        <p>Como estruturar o lançamento da sua oferta assim que ela estiver pronta — em vez de só publicar e esperar que aconteça sozinho.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="preview-sec">
-  <div class="w">
-    <span class="tag" style="text-align:center;display:block">NÃO PRECISA COMPRAR NO ESCURO</span>
-    <h2 class="sh rev">Veja páginas reais do material antes de decidir.</h2>
-    <p class="sp rev">Essas prévias mostram o nível de organização e profundidade que você recebe no acesso.</p>
-    <div class="preview-carousel">
-      <button class="preview-arrow" type="button" data-preview-prev aria-label="Imagem anterior">‹</button>
-      <div class="preview-viewport">
-        <div class="preview-track" data-preview-track>
-          <figure class="preview-card"><img src="assets/previews/modulos-overview.png" alt="Visão geral dos cinco produtos do Manual" loading="lazy"><figcaption>Visão geral dos produtos</figcaption></figure>
-          <figure class="preview-card"><img src="assets/previews/nicho-mercados.png" alt="Prévia sobre mercados e nicho" loading="lazy"><figcaption>Mercados e oportunidades de nicho</figcaption></figure>
-          <figure class="preview-card"><img src="assets/previews/regra-tres-camadas.png" alt="Prévia sobre mercado, nicho e sub-nicho" loading="lazy"><figcaption>Mercado, nicho e sub-nicho</figcaption></figure>
-          <figure class="preview-card"><img src="assets/previews/escala-fases.png" alt="Prévia sobre fases de escala" loading="lazy"><figcaption>Fases de validação, otimização e escala</figcaption></figure>
-          <figure class="preview-card"><img src="assets/previews/ilusao-verdadeira-escala.png" alt="Prévia sobre ilusão e verdadeira escala" loading="lazy"><figcaption>Escala com controle</figcaption></figure>
-          <figure class="preview-card"><img src="assets/previews/escala-vertical-horizontal.png" alt="Prévia sobre escala vertical e horizontal" loading="lazy"><figcaption>Escala vertical e horizontal</figcaption></figure>
-          <figure class="preview-card"><img src="assets/previews/oxigenio-digital.png" alt="Prévia sobre tráfego" loading="lazy"><figcaption>O papel do tráfego no digital</figcaption></figure>
-          <figure class="preview-card"><img src="assets/previews/organico-pago.png" alt="Prévia comparando tráfego orgânico e pago" loading="lazy"><figcaption>Tráfego orgânico e pago</figcaption></figure>
-          <figure class="preview-card"><img src="assets/previews/primeiros-7-dias.png" alt="Prévia sobre os primeiros 7 dias" loading="lazy"><figcaption>O que observar nos primeiros 7 dias</figcaption></figure>
-        </div>
-      </div>
-      <button class="preview-arrow" type="button" data-preview-next aria-label="Próxima imagem">›</button>
-    </div>
-    <div class="preview-dots" data-preview-dots></div>
   </div>
 </section>
 
@@ -610,33 +551,6 @@ document.querySelectorAll('[data-track]').forEach(function(link){
     if(typeof fbq==='function'){fbq('trackCustom','ClickCTA',{placement:link.getAttribute('data-track')})}
   });
 });
-
-// Carrossel de prévias
-(function(){
-  var track=document.querySelector('[data-preview-track]');
-  if(!track)return;
-  var slides=Array.prototype.slice.call(track.children);
-  var dots=document.querySelector('[data-preview-dots]');
-  var current=0;
-  slides.forEach(function(_,i){
-    var dot=document.createElement('button');
-    dot.type='button';dot.className='preview-dot'+(i===0?' is-active':'');
-    dot.setAttribute('aria-label','Ir para a prévia '+(i+1));
-    dot.addEventListener('click',function(){go(i)});
-    dots.appendChild(dot);
-  });
-  function go(index){
-    current=(index+slides.length)%slides.length;
-    track.style.transform='translateX(-'+(current*100)+'%)';
-    Array.prototype.forEach.call(dots.children,function(dot,i){dot.classList.toggle('is-active',i===current)});
-  }
-  document.querySelector('[data-preview-prev]').addEventListener('click',function(){go(current-1)});
-  document.querySelector('[data-preview-next]').addEventListener('click',function(){go(current+1)});
-  document.addEventListener('keydown',function(e){
-    if(e.key==='ArrowLeft')go(current-1);
-    if(e.key==='ArrowRight')go(current+1);
-  });
-})();
 </script>
 </body>
 </html>
