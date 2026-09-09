@@ -35,9 +35,9 @@ html{color-scheme:dark;scroll-behavior:smooth}
   --panel-blue:#101a2c;
   --border:rgba(255,255,255,.08);
   --border-blue:rgba(127,168,216,.16);
-  --cream:#EDEEF0;
-  --muted:#9CA3AB;
-  --muted2:#7C828A;
+  --cream:#F5F6F7;
+  --muted:#C7CCD3;
+  --muted2:#9DA3AC;
   --amber:#C9A15A;
   --amber2:#D9B876;
   --blue:#7FA8D8;
@@ -54,7 +54,7 @@ a{color:inherit}
 section{padding:88px 24px}
 .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--amber);margin-bottom:14px;display:block}
 .sh{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.02em;color:var(--cream);margin-bottom:16px}
-.sp{font-size:16.5px;line-height:1.75;color:var(--muted)}
+.sp{font-size:18px;line-height:1.72;color:var(--muted)}
 .sp strong{color:var(--cream)}
 .btn{background:var(--cta);color:var(--cta-ink);font-size:15px;font-weight:700;padding:16px 30px;border-radius:8px;display:inline-flex;align-items:center;gap:9px;text-decoration:none;box-shadow:0 10px 30px -8px rgba(230,75,67,.45);border:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translateY(-1px);background:var(--cta-hover);box-shadow:0 14px 34px -8px rgba(230,75,67,.55)}
@@ -78,10 +78,10 @@ section{padding:88px 24px}
 .avatar img{width:100%;height:100%;object-fit:cover}
 .kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(201,161,90,.1);border:1px solid rgba(201,161,90,.25);color:var(--amber2);font-size:12px;font-weight:600;letter-spacing:.03em;padding:7px 16px;border-radius:100px;margin-bottom:26px}
 .kicker i{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;box-shadow:0 0 8px var(--green)}
-.hero-eyebrow{font-size:16px;color:var(--muted);margin-bottom:14px;max-width:440px;margin-left:auto;margin-right:auto}
+.hero-eyebrow{font-size:17px;color:var(--muted);margin-bottom:14px;max-width:460px;margin-left:auto;margin-right:auto}
 .h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,4.4vw,40px);line-height:1.2;letter-spacing:-.02em;margin-bottom:20px;color:#F5F4F2;max-width:620px;margin-left:auto;margin-right:auto}
 .h1 em{font-style:normal;color:var(--amber)}
-.hero-sub{font-size:16.5px;line-height:1.72;color:var(--muted);max-width:520px;margin:0 auto 32px}
+.hero-sub{font-size:18px;line-height:1.68;color:var(--muted);max-width:540px;margin:0 auto 32px}
 .hero-sub strong{color:var(--cream)}
 .hero-meta{display:block;margin-top:16px;font-size:12.5px;color:var(--muted2)}
 
@@ -94,7 +94,7 @@ section{padding:88px 24px}
 .pc{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:26px 22px}
 .pc-ic{margin-bottom:14px;color:var(--amber)}
 .pc-t{font-size:15.5px;font-weight:600;margin-bottom:8px;color:var(--cream)}
-.pc-d{font-size:13.5px;line-height:1.6;color:var(--muted)}
+.pc-d{font-size:15.5px;line-height:1.6;color:var(--muted)}
 
 /* ORDER STRIPE */
 .order-stripe{background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:44px 24px;text-align:center}
@@ -114,27 +114,33 @@ section{padding:88px 24px}
 .qf-ic.yes{background:var(--green)}
 .qf-ic.no{background:var(--red)}
 .qf-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
-.qf-col li{position:relative;padding-left:17px;font-size:14px;line-height:1.55;color:var(--muted)}
+.qf-col li{position:relative;padding-left:17px;font-size:15.5px;line-height:1.6;color:var(--muted)}
 .qf-col li::before{content:'';position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--muted2)}
 .qf-note{margin-top:26px;font-size:13.5px;color:var(--muted2);font-style:italic;text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
 
-/* PRODUCTS (azul) — cards grandes com resumo, substituem roadmap fino + prints reais */
+/* PRODUCTS (azul) — carrossel horizontal, card branco com borda azul */
 .products-sec{background:linear-gradient(180deg,var(--bg2) 0%,#0A0F1A 100%);border-top:1px solid var(--border)}
 .products-sec .tag{color:var(--blue);text-align:center}
 .products-sec .sh{text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
 .products-sec .sp.center{text-align:center;max-width:620px;margin:0 auto 44px}
-.cards-big{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:980px;margin:0 auto}
-.cardb{background:var(--panel-blue);border:1px solid var(--border-blue);border-radius:14px;padding:32px;transition:border-color .2s,transform .2s}
-.cardb:hover{border-color:rgba(127,168,216,.4);transform:translateY(-2px)}
-.cardb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-.cardb-num{font-family:'DM Mono',monospace;font-size:12px;color:#5E7BA8;letter-spacing:.04em}
-.cardb-ic{width:44px;height:44px;border-radius:10px;background:rgba(127,168,216,.14);display:flex;align-items:center;justify-content:center;color:var(--blue)}
-.cardb h4{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;margin-bottom:12px;color:var(--cream)}
-.cardb p{font-size:14.5px;line-height:1.68;color:#9AA5B5}
-.cardb.bonus{background:rgba(201,161,90,.07);border-color:rgba(201,161,90,.3)}
-.cardb.bonus .cardb-ic{background:rgba(201,161,90,.16);color:var(--amber)}
-.cardb.bonus .cardb-num{color:var(--amber2)}
-@media(max-width:760px){.cards-big{grid-template-columns:1fr}.cardb{padding:26px 24px}}
+.pcarousel{position:relative;display:flex;align-items:center;gap:16px;max-width:640px;margin:0 auto}
+.pcar-viewport{flex:1;overflow:hidden;border-radius:16px}
+.pcar-track{display:flex;transition:transform .4s ease}
+.pcard{flex:0 0 100%;width:100%;box-sizing:border-box;background:#F7F8FA;border:2px solid var(--blue);border-radius:16px;padding:36px 32px;min-height:280px}
+.pcard-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.pcard-num{font-family:'DM Mono',monospace;font-size:13px;color:#3E6FA8;font-weight:600;letter-spacing:.04em}
+.pcard-ic{width:46px;height:46px;border-radius:10px;background:rgba(58,120,190,.12);display:flex;align-items:center;justify-content:center;color:#2E5A8C}
+.pcard h4{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;margin-bottom:14px;color:#101820}
+.pcard p{font-size:16px;line-height:1.65;color:#3A4552}
+.pcard.is-bonus{background:#FBF6EC;border-color:var(--amber)}
+.pcard.is-bonus .pcard-ic{background:rgba(201,161,90,.18);color:#8A6212}
+.pcard.is-bonus .pcard-num{color:#8A6212}
+.pcar-arrow{flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:1px solid var(--border-blue);background:var(--panel-blue);color:var(--cream);font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s}
+.pcar-arrow:hover{border-color:var(--blue);color:var(--blue)}
+.pcar-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.pcar-dot{width:7px;height:7px;border-radius:50%;background:var(--border-blue);border:none;cursor:pointer;padding:0;transition:width .2s,background .2s}
+.pcar-dot.is-active{background:var(--blue);width:22px;border-radius:4px}
+@media(max-width:640px){.pcarousel{gap:8px}.pcar-arrow{flex:0 0 36px;width:36px;height:36px;font-size:18px}.pcard{padding:28px 22px;min-height:0}.pcard h4{font-size:19px}.pcard p{font-size:15.5px}}
 
 /* QUALIFY (repeat vars ok) */
 
@@ -150,7 +156,7 @@ section{padding:88px 24px}
 .offer-includes strong{font-size:14px;color:var(--cream)}
 .offer-includes small{font-size:12.5px;color:var(--muted2);line-height:1.4}
 .value-stack{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;margin-bottom:22px}
-.value-stack>div{display:flex;justify-content:space-between;gap:16px;padding:6px 0;font-size:13.5px;color:var(--muted)}
+.value-stack>div{display:flex;justify-content:space-between;gap:16px;padding:7px 0;font-size:15px;color:var(--muted)}
 .value-stack>div strong{color:var(--cream)}
 .value-total{margin-top:8px;padding-top:10px;border-top:1px dashed var(--border);color:var(--amber2)}
 .value-total strong{color:var(--amber2)!important;font-size:16px}
@@ -180,7 +186,7 @@ section{padding:88px 24px}
 .lot-urgency span{font-size:12px;color:var(--muted)}
 .oc-sep{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
 .oc-list{list-style:none;display:flex;flex-direction:column;gap:13px;margin-bottom:28px}
-.oc-list li{display:flex;gap:10px;font-size:13.5px;color:var(--muted);line-height:1.5}
+.oc-list li{display:flex;gap:10px;font-size:15px;color:var(--muted);line-height:1.55}
 .oc-list li strong{color:var(--cream)}
 .ck{color:var(--green);flex-shrink:0;font-weight:700}
 .oc-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--cta);color:var(--cta-ink);font-size:15px;font-weight:700;padding:17px;border-radius:9px;text-decoration:none}
@@ -192,7 +198,7 @@ section{padding:88px 24px}
 .g-shield{width:52px;height:52px;margin:0 auto 18px;color:var(--blue)}
 .g-days{font-size:12px;letter-spacing:.1em;color:var(--blue);font-weight:700;margin-bottom:10px}
 .g-title{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--cream);margin-bottom:14px}
-.g-body{font-size:15px;line-height:1.7;color:var(--muted)}
+.g-body{font-size:16.5px;line-height:1.68;color:var(--muted)}
 .g-note{margin-top:20px;padding-top:18px;border-top:1px solid var(--border);font-size:12.5px;color:var(--muted2);line-height:1.55}
 
 /* URGENCY / COUNTDOWN */
@@ -228,7 +234,7 @@ section{padding:88px 24px}
 .final-badges{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px}
 .fbg{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted2)}
 
-footer{text-align:center;padding:48px 24px 100px;font-size:13px;color:var(--muted2)}
+footer{text-align:center;padding:48px 24px 100px;font-size:14.5px;color:var(--muted2)}
 footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--amber)}
 
@@ -271,7 +277,7 @@ footer a:hover{color:var(--amber)}
     <div class="kicker rev"><i></i> LOTE 1 · ACESSO IMEDIATO</div>
     <p class="hero-eyebrow rev">Você quer vender um infoproduto, mas na hora de montar a oferta, trava.</p>
     <h1 class="h1 rev">Entenda o que é uma oferta low ticket <em>e monte a sua</em> — do zero, ainda hoje.</h1>
-    <p class="hero-sub rev">A maioria nunca chega a vender porque não sabe o que é low ticket de verdade, nem por onde começar a estruturar uma oferta. O Manual resolve isso em 5 produtos + 1 bônus — os 3 primeiros já bastam pra você sair com uma oferta pronta pra publicar.</p>
+    <p class="hero-sub rev">A maioria nunca chega a vender porque não sabe o que é low ticket de verdade, nem por onde começar a estruturar uma oferta. Isso se resolve em 5 passos + 1 bônus — os 3 primeiros já bastam pra você sair com uma oferta pronta pra publicar.</p>
     <a href="#ofertas" class="btn rev">Garantir no Lote 1 — R$14,67 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     <span class="hero-meta rev">Pagamento único · Sem mensalidade · 30 dias de garantia</span>
   </div>
@@ -284,8 +290,8 @@ footer a:hover{color:var(--amber)}
       <h2 class="sh rev">Todo mundo fala em low ticket.<br>Quase ninguém explica como montar um.</h2>
     </div>
     <div class="pain-scene rev">
-      Você já ouviu que dá pra vender um produto digital por R$20 ou R$30 e ainda assim ter lucro — e que muita gente vive disso. Faz sentido na teoria.<br><br>
-      Na prática, ninguém te mostrou como escolher o que vender, que preço colocar ou como montar uma oferta que não pareça amadora. Aí você trava antes de tentar, ou tenta e termina sem saber se fez certo.
+      Você quer vender online, mas não sabe o que vender, quanto cobrar ou como montar uma oferta que funcione de verdade. Isso trava mais gente do que parece.<br><br>
+      Ninguém te mostrou o passo a passo. Só o resultado dos outros, nunca o caminho até lá. Por isso você adia, tenta e para na metade, ou nem chega a tentar.
     </div>
     <div class="pain-grid">
       <div class="pc rev">
@@ -322,7 +328,7 @@ footer a:hover{color:var(--amber)}
 <section class="qualify-sec">
   <div class="w">
     <span class="tag rev" style="text-align:center;display:block">ANTES DE VOCÊ DECIDIR</span>
-    <h2 class="sh rev" style="text-align:center;max-width:600px;margin-left:auto;margin-right:auto">Isso não serve pra todo mundo. E tudo bem.</h2>
+    <h2 class="sh rev" style="text-align:center;max-width:600px;margin-left:auto;margin-right:auto">Isso não serve pra todo mundo. E está tudo bem.</h2>
     <p class="sp rev" style="text-align:center;max-width:560px;margin:0 auto">Quanto mais claro isso ficar agora, menor a chance de você comprar e se arrepender depois.</p>
     <div class="qualify-grid">
       <div class="qf-col qf-yes rev">
@@ -351,41 +357,48 @@ footer a:hover{color:var(--amber)}
 
 <section class="products-sec" id="produtos">
   <div class="w">
-    <span class="tag rev">O QUE VOCÊ ESTÁ COMPRANDO</span>
-    <h2 class="sh rev">5 produtos + 1 bônus pra você entender e montar sua oferta.</h2>
-    <p class="sp center rev">Cada um resolve uma trava específica: entender o modelo, escolher o que vender, estruturar a oferta, atrair gente até ela e saber o que ajustar depois. Comprados separados, cada um teria preço próprio.</p>
-    <div class="cards-big">
-      <div class="cardb rev">
-        <div class="cardb-top"><span class="cardb-num">01</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div></div>
-        <h4>O Modelo</h4>
-        <p>O que é, de fato, uma oferta low ticket — e por que vender por R$20 pode dar mais lucro que vender por R$500. A lógica por trás do modelo, explicada sem enrolação.</p>
+    <span class="tag rev">COMO ISSO RESOLVE SEU PROBLEMA</span>
+    <h2 class="sh rev">5 passos pra sair do "não sei nem por onde começar".</h2>
+    <p class="sp center rev">Cada etapa resolve uma trava específica: entender o modelo, escolher o que vender, montar a oferta, atrair as primeiras pessoas e saber o que ajustar depois.</p>
+    <div class="pcarousel">
+      <button class="pcar-arrow" type="button" data-pcar-prev aria-label="Produto anterior">‹</button>
+      <div class="pcar-viewport">
+        <div class="pcar-track" data-pcar-track>
+          <div class="pcard">
+            <div class="pcard-top"><span class="pcard-num">01</span><div class="pcard-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div></div>
+            <h4>O modelo</h4>
+            <p>O que é, de fato, vender low ticket — e por que cobrar menos pode dar mais lucro do que cobrar mais. A lógica explicada sem enrolação, pra você parar de girar em torno do assunto.</p>
+          </div>
+          <div class="pcard">
+            <div class="pcard-top"><span class="pcard-num">02</span><div class="pcard-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg></div></div>
+            <h4>Nicho e produto</h4>
+            <p>Como escolher o que vender e pra quem, e criar o produto do zero com apoio de inteligência artificial — mesmo sem nenhuma ideia hoje.</p>
+          </div>
+          <div class="pcard">
+            <div class="pcard-top"><span class="pcard-num">03</span><div class="pcard-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div></div>
+            <h4>Oferta e divulgação</h4>
+            <p>O passo a passo pra montar uma oferta de verdade: produto, promessa, preço e página, prontos pra publicar sem depender de sorte.</p>
+          </div>
+          <div class="pcard">
+            <div class="pcard-top"><span class="pcard-num">04</span><div class="pcard-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div></div>
+            <h4>Tráfego</h4>
+            <p>Como levar as primeiras pessoas até a sua oferta, com ou sem orçamento pra anúncio, sem precisar entender de marketing digital primeiro.</p>
+          </div>
+          <div class="pcard">
+            <div class="pcard-top"><span class="pcard-num">05</span><div class="pcard-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 17l3-6 4 3 5-9"/></svg></div></div>
+            <h4>Próximos testes</h4>
+            <p>O que observar depois da primeira tentativa de venda pra saber se o problema é a oferta, o público ou o preço, antes de trocar tudo de uma vez.</p>
+          </div>
+          <div class="pcard is-bonus">
+            <div class="pcard-top"><span class="pcard-num">BÔNUS</span><div class="pcard-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div></div>
+            <h4>Estratégia de lançamento</h4>
+            <p>Como estruturar o lançamento assim que a oferta estiver pronta, em vez de só publicar e torcer pra alguém aparecer.</p>
+          </div>
+        </div>
       </div>
-      <div class="cardb rev">
-        <div class="cardb-top"><span class="cardb-num">02</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg></div></div>
-        <h4>Nicho e Produto</h4>
-        <p>Como escolher o que vender e pra quem, e criar o produto do zero com apoio de inteligência artificial — mesmo que hoje você não tenha nenhuma ideia.</p>
-      </div>
-      <div class="cardb rev">
-        <div class="cardb-top"><span class="cardb-num">03</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div></div>
-        <h4>Oferta e Divulgação</h4>
-        <p>O passo a passo pra estruturar uma oferta de verdade: produto, promessa, preço e página, prontos pra publicar sem depender de sorte.</p>
-      </div>
-      <div class="cardb rev">
-        <div class="cardb-top"><span class="cardb-num">04</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div></div>
-        <h4>Tráfego</h4>
-        <p>Como levar as primeiras pessoas até a sua oferta, com ou sem orçamento pra anúncio — sem precisar entender de marketing digital primeiro.</p>
-      </div>
-      <div class="cardb rev">
-        <div class="cardb-top"><span class="cardb-num">05</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 17l3-6 4 3 5-9"/></svg></div></div>
-        <h4>Próximos Testes</h4>
-        <p>O que observar depois da primeira tentativa de venda pra saber se o problema é a oferta, o público ou o preço — antes de trocar tudo de uma vez.</p>
-      </div>
-      <div class="cardb bonus rev">
-        <div class="cardb-top"><span class="cardb-num">BÔNUS</span><div class="cardb-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div></div>
-        <h4>Estratégia de Lançamento</h4>
-        <p>Como estruturar o lançamento assim que a oferta estiver pronta — em vez de só publicar e torcer pra alguém aparecer.</p>
-      </div>
+      <button class="pcar-arrow" type="button" data-pcar-next aria-label="Próximo produto">›</button>
     </div>
+    <div class="pcar-dots" data-pcar-dots></div>
   </div>
 </section>
 
@@ -446,7 +459,7 @@ footer a:hover{color:var(--amber)}
       <svg class="g-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       <div class="g-days">30 DIAS</div>
       <div class="g-title">Garantia Incondicional</div>
-      <p class="g-body">Acesse o material, leia e comece a aplicar. Se dentro de 30 dias entender que o Manual não faz sentido pro seu momento, solicite o reembolso. Você recebe 100% do valor de volta.</p>
+      <p class="g-body">Acesse o material, leia e comece a aplicar. Se dentro de 30 dias você entender que não faz sentido pro seu momento, solicite o reembolso. Você recebe 100% do valor de volta.</p>
       <div class="g-note">A garantia existe para você decidir com calma — não para prometer um resultado financeiro.</div>
     </div>
   </div>
@@ -475,11 +488,11 @@ footer a:hover{color:var(--amber)}
     <h2 class="sh rev">Respostas diretas.</h2>
     <div style="margin-top:32px">
       <div class="fi rev"><button class="fb" onclick="fq(this)">É curso ou manual digital?<span class="fi-ic">+</span></button><div class="fa">É um manual digital: 5 produtos + 1 bônus em formato de leitura direta, sem enrolação de videoaula longa.</div></div>
-      <div class="fi rev"><button class="fb" onclick="fq(this)">Nunca fiz uma venda. Serve para mim?<span class="fi-ic">+</span></button><div class="fa">Sim. O Produto 01 parte do zero — inclusive de quem nunca vendeu nada online.</div></div>
+      <div class="fi rev"><button class="fb" onclick="fq(this)">Nunca fiz uma venda. Serve para mim?<span class="fi-ic">+</span></button><div class="fa">Sim. O Produto 01 parte do zero, inclusive pra quem nunca vendeu nada online.</div></div>
       <div class="fi rev"><button class="fb" onclick="fq(this)">Não sei nem direito o que é low ticket. Serve pra mim?<span class="fi-ic">+</span></button><div class="fa">Serve especialmente pra você. O Produto 01 explica o modelo do zero, antes de qualquer execução — não precisa entender nada disso hoje.</div></div>
-      <div class="fi rev"><button class="fb" onclick="fq(this)">Para quem é o Manual da Venda Low Ticket 2026?<span class="fi-ic">+</span></button><div class="fa">Para quem quer vender um infoproduto mas nunca soube por onde começar, ou já tentou montar uma oferta e não conseguiu terminar.</div></div>
+      <div class="fi rev"><button class="fb" onclick="fq(this)">Pra quem é isso?<span class="fi-ic">+</span></button><div class="fa">Pra quem quer vender um infoproduto mas nunca soube por onde começar, ou já tentou montar uma oferta e não conseguiu terminar.</div></div>
       <div class="fi rev"><button class="fb" onclick="fq(this)">Como recebo o acesso após a compra?<span class="fi-ic">+</span></button><div class="fa">Acesso imediato após a confirmação do pagamento, direto na plataforma de entrega.</div></div>
-      <div class="fi rev"><button class="fb" onclick="fq(this)">E se eu não gostar ou não conseguir aplicar?<span class="fi-ic">+</span></button><div class="fa">Você tem 30 dias de garantia incondicional. Solicita o reembolso e recebe 100% de volta.</div></div>
+      <div class="fi rev"><button class="fb" onclick="fq(this)">E se eu não gostar ou não conseguir aplicar?<span class="fi-ic">+</span></button><div class="fa">Você tem 30 dias de garantia incondicional. É só solicitar o reembolso e receber 100% de volta.</div></div>
       <div class="fi rev"><button class="fb" onclick="fq(this)">Preciso ter um produto digital pronto para começar?<span class="fi-ic">+</span></button><div class="fa">Não. O Produto 02 é dedicado à escolha do nicho, validação e estruturação do produto do zero, com apoio de inteligência artificial.</div></div>
       <div class="fi rev"><button class="fb" onclick="fq(this)">Por que o preço vai subir?<span class="fi-ic">+</span></button><div class="fa">O Lote 1 é o valor de entrada para o primeiro grupo de leitores. Depois do prazo mostrado na página, o preço passa para R$27 no Lote 2. <strong>Não é um contador decorativo:</strong> quem compra no Lote 1 paga o valor mais baixo que este manual vai ter.</div></div>
     </div>
@@ -489,8 +502,8 @@ footer a:hover{color:var(--amber)}
 <section class="final-sec">
   <div class="w">
     <span class="tag">A DECISÃO É SUA</span>
-    <h2 class="sh rev">Você pode continuar adiando entender como isso funciona.<br><em>Ou resolver isso agora, por R$14,67.</em></h2>
-    <p class="sp rev">Não precisa saber tudo de marketing digital pra dar o primeiro passo — precisa entender o que é uma oferta low ticket e como montar a sua. É isso que o Manual resolve. E o Lote 1 não fica no ar pra sempre: quando fechar, o preço vira R$27.</p>
+    <h2 class="sh rev">Você pode continuar adiando.<br><em>Ou resolver isso agora, por R$14,67.</em></h2>
+    <p class="sp rev">Não precisa saber tudo de marketing digital pra dar o primeiro passo. Precisa entender o que é uma oferta low ticket e como montar a sua — é isso que você resolve aqui. E o Lote 1 não fica no ar pra sempre: quando fechar, o preço vira R$27.</p>
     <a href="https://pay.kiwify.com.br/avFrC1J" class="btn rev" data-track="cta_final">Sim, quero entender e montar minha oferta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     <div class="final-badges rev">
       <div class="fbg"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro</div>
@@ -542,6 +555,29 @@ var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isInte
 document.querySelectorAll('.rev').forEach(function(el){obs.observe(el)});
 
 function fq(btn){var it=btn.closest('.fi'),op=it.classList.contains('open');document.querySelectorAll('.fi.open').forEach(function(i){i.classList.remove('open')});if(!op)it.classList.add('open')}
+
+// Carrossel de produtos
+(function(){
+  var track=document.querySelector('[data-pcar-track]');
+  if(!track)return;
+  var slides=Array.prototype.slice.call(track.children);
+  var dots=document.querySelector('[data-pcar-dots]');
+  var current=0;
+  slides.forEach(function(_,i){
+    var dot=document.createElement('button');
+    dot.type='button';dot.className='pcar-dot'+(i===0?' is-active':'');
+    dot.setAttribute('aria-label','Ir para o produto '+(i+1));
+    dot.addEventListener('click',function(){go(i)});
+    dots.appendChild(dot);
+  });
+  function go(index){
+    current=(index+slides.length)%slides.length;
+    track.style.transform='translateX(-'+(current*100)+'%)';
+    Array.prototype.forEach.call(dots.children,function(dot,i){dot.classList.toggle('is-active',i===current)});
+  }
+  document.querySelector('[data-pcar-prev]').addEventListener('click',function(){go(current-1)});
+  document.querySelector('[data-pcar-next]').addEventListener('click',function(){go(current+1)});
+})();
 
 var ofSec=document.getElementById('ofertas'),fb=document.getElementById('fbar');
 if(ofSec&&fb){new IntersectionObserver(function(e){fb.style.display=e[0].isIntersecting?'none':''},{threshold:0.2}).observe(ofSec)}
